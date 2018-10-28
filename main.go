@@ -39,6 +39,9 @@ func main() {
 			if primes[prime] > start {
 				log.Println(prime)
 			}
+			for i := prime * 2; i < int(end); i += prime {
+				isPrimes[i] = false
+			}
 		}
 	}
 
