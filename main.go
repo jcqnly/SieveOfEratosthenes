@@ -22,7 +22,13 @@ func main() {
 	flag.UintVar(&end, "end", 10, "usage")
 
 	flag.Parse()
-	//log.Println(start, end)
+	//declare primes and give it a type
+	primes := make([]uint, end)
+	for prime := range primes {
+		if isPrime(primes[prime]) {
+			log.Println(prime)
+		}
+	}
 	log.Println(start)
 	log.Println(end)
 	for i := start; i < end; i++ {
